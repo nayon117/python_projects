@@ -14,7 +14,6 @@ else:
 random_number = random.randint(0,top_of_range)
 
 guesses = 0
-
 while True:
     guesses+= 1
     user_guess  = input("Make a guess: ")
@@ -23,13 +22,13 @@ while True:
     else:
         print("Please type a number next time")
         continue
+
     if user_guess == random_number:
         print("You got it!")
         break
+    elif user_guess > random_number:
+        print("You are above the number")
     else:
-        if user_guess > random_number:
-            print("You are above the number")
-        else:
-            print("You are below the nubmer")
+        print("You are below the nubmer")
 
 print("You got it in ", guesses, "guesses")
